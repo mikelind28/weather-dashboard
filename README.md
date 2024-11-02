@@ -38,7 +38,7 @@ The application is easy to use—just type in a city name, click search, and see
 
 ## Credits
 
-A lot of the starter code was provided by EdX Coding Bootcamp course via the University of Minnesota. 
+A lot of the starter code was provided by EdX Coding Bootcamp course via the University of Minnesota. I filled in some server-side functions to fetch the API data from OpenWeather and connect the application's front end to the back end.
 
 ## License
 
