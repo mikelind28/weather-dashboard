@@ -1,1 +1,30 @@
-[]
+[
+	{
+		"name": "santa monica",
+		"id": "c2078397-7629-45da-87e8-3184bf40dafd"
+	},
+	{
+		"name": "simi valley",
+		"id": "d976f153-981b-4aa8-b512-445404d78595"
+	},
+	{
+		"name": "boise",
+		"id": "5dc9ae05-0ae9-4759-b222-b341355853ea"
+	},
+	{
+		"name": "paris",
+		"id": "ce0c9ea2-2dbc-49a1-8ed6-1dffa881c86b"
+	},
+	{
+		"name": "berlin",
+		"id": "82bcef4f-6a2b-4166-9da9-a101f22ea755"
+	},
+	{
+		"name": "duluth",
+		"id": "8492c809-c4df-456b-9eb5-6c7d5edacc30"
+	},
+	{
+		"name": "minneapolis",
+		"id": "8b36ed32-62cc-4179-9691-c070a2af2634"
+	}
+]

@@ -2,13 +2,36 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 // TODO: Define an interface for the Coordinates object
+/*
 interface Coordinates {
-
+  lat: number;
+  lon: number;
 }
+*/
 
 // TODO: Define a class for the Weather object
 class Weather {
+  city: string;
+  date: Date;
+  icon: string;
+  iconDescription: string;
+  tempF: number;
+  windSpeed: number;
+  humidity: number;
+  dt_txt: any;
+  weather: any;
+  main: any;
+  wind: any;
 
+  constructor(city: string, date: Date, icon: string, iconDescription: string, tempF: number, windSpeed: number, humidity: number) {
+    this.city = city;
+    this.date = date;
+    this.icon = icon;
+    this.iconDescription = iconDescription;
+    this.tempF = tempF;
+    this.windSpeed = windSpeed;
+    this.humidity = humidity;
+  }
 }
 
 // TODO: Complete the WeatherService class
@@ -16,21 +39,19 @@ class WeatherService {
   // TODO: Define the baseURL, API key, and city name properties
   private baseURL?: string;
   private apiKey?: string;
-  cityName: string;
+  // cityName: string;
 
-  constructor(cityName: string) {
+  constructor(/* cityName: string */) {
     this.baseURL = process.env.API_BASE_URL || '';
     this.apiKey = process.env.API_KEY || '';
-    this.cityName = cityName;
+    // this.cityName = cityName
   }
 
-  // TODO: Create fetchLocationData method
+  /*
+
+  // TODO: Create fetchLocationData method.
   private async fetchLocationData(query: string) {
-    try {
-      const response = await fetch(
-        
-      )
-    }
+
   }
 
   // TODO: Create destructureLocationData method
@@ -67,11 +88,46 @@ class WeatherService {
   private buildForecastArray(currentWeather: Weather, weatherData: any[]) {
 
   }
+
+  */
   
   // TODO: Complete getWeatherForCity method
   async getWeatherForCity(city: string) {
+    const response = await fetch(`${this.baseURL}/geo/1.0/direct?q=${city}&limit=10&appid=${this.apiKey}`);
 
+    const cityData = await response.json();
+
+    const lat = cityData[0].lat;
+    const lon = cityData[0].lon;
+
+    const response2 = await fetch(`${this.baseURL}/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${this.apiKey}`);
+
+    const weatherData = await response2.json();
+
+    const weatherDataMapped = weatherData.list.map((each: Weather) => {
+        const weatherObject = {
+            city: weatherData.city.name,
+            date: each.dt_txt,
+            icon: each.weather[0].icon,
+            iconDescription: each.weather[0].description,
+            tempF: each.main.temp,
+            windSpeed: each.wind.speed,
+            humidity: each.main.humidity
+        }
+
+        return weatherObject;
+    });
+
+    const weatherDataFiltered = weatherDataMapped.filter((_value: Weather, index: number): any => {
+      if (index % 8 === 0) {
+        return true;
+      }
+    });
+
+    console.log(weatherDataFiltered);
+    return weatherDataFiltered;
   }
+
 }
 
 export default new WeatherService();
