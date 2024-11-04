@@ -4,10 +4,6 @@
 		"id": "c2078397-7629-45da-87e8-3184bf40dafd"
 	},
 	{
-		"name": "simi valley",
-		"id": "d976f153-981b-4aa8-b512-445404d78595"
-	},
-	{
 		"name": "boise",
 		"id": "5dc9ae05-0ae9-4759-b222-b341355853ea"
 	},
@@ -26,5 +22,9 @@
 	{
 		"name": "minneapolis",
 		"id": "8b36ed32-62cc-4179-9691-c070a2af2634"
+	},
+	{
+		"name": "lima",
+		"id": "a6af404e-dbd7-4007-9ae9-4d0857c12615"
 	}
 ]
