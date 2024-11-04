@@ -1,30 +1,34 @@
 [
 	{
-		"name": "santa monica",
+		"name": "Santa Monica",
 		"id": "c2078397-7629-45da-87e8-3184bf40dafd"
 	},
 	{
-		"name": "boise",
+		"name": "Boise",
 		"id": "5dc9ae05-0ae9-4759-b222-b341355853ea"
 	},
 	{
-		"name": "paris",
+		"name": "Paris",
 		"id": "ce0c9ea2-2dbc-49a1-8ed6-1dffa881c86b"
 	},
 	{
-		"name": "berlin",
+		"name": "Berlin",
 		"id": "82bcef4f-6a2b-4166-9da9-a101f22ea755"
 	},
 	{
-		"name": "duluth",
+		"name": "Duluth",
 		"id": "8492c809-c4df-456b-9eb5-6c7d5edacc30"
 	},
 	{
-		"name": "minneapolis",
+		"name": "Minneapolis",
 		"id": "8b36ed32-62cc-4179-9691-c070a2af2634"
 	},
 	{
-		"name": "lima",
+		"name": "Lima",
 		"id": "a6af404e-dbd7-4007-9ae9-4d0857c12615"
+	},
+	{
+		"name": "Chicago",
+		"id": "46667ebd-5853-4453-be57-7cf62db75e76"
 	}
 ]

@@ -2,13 +2,36 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 // TODO: Define an interface for the Coordinates object
+/*
 interface Coordinates {
-
+  lat: number;
+  lon: number;
 }
+*/
 
 // TODO: Define a class for the Weather object
 class Weather {
+  city: string;
+  date: Date;
+  icon: string;
+  iconDescription: string;
+  tempF: number;
+  windSpeed: number;
+  humidity: number;
+  dt_txt: any;
+  weather: any;
+  main: any;
+  wind: any;
 
+  constructor(city: string, date: Date, icon: string, iconDescription: string, tempF: number, windSpeed: number, humidity: number) {
+    this.city = city;
+    this.date = date;
+    this.icon = icon;
+    this.iconDescription = iconDescription;
+    this.tempF = tempF;
+    this.windSpeed = windSpeed;
+    this.humidity = humidity;
+  }
 }
 
 // TODO: Complete the WeatherService class
@@ -16,21 +39,19 @@ class WeatherService {
   // TODO: Define the baseURL, API key, and city name properties
   private baseURL?: string;
   private apiKey?: string;
-  cityName: string;
+  // cityName: string;
 
-  constructor(cityName: string) {
+  constructor(/* cityName: string */) {
     this.baseURL = process.env.API_BASE_URL || '';
     this.apiKey = process.env.API_KEY || '';
-    this.cityName = cityName;
+    // this.cityName = cityName
   }
 
-  // TODO: Create fetchLocationData method
+  /*
+
+  // TODO: Create fetchLocationData method.
   private async fetchLocationData(query: string) {
-    try {
-      const response = await fetch(
-        
-      )
-    }
+
   }
 
   // TODO: Create destructureLocationData method
@@ -67,6 +88,8 @@ class WeatherService {
   private buildForecastArray(currentWeather: Weather, weatherData: any[]) {
 
   }
+
+  */
   
   // TODO: Complete getWeatherForCity method
   async getWeatherForCity(city: string) {
