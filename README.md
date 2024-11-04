@@ -33,7 +33,7 @@ You can test the application using ```npm run start:dev``` from the weather-dash
 
 The application is easy to use—just type in a city name, click search, and see the results! Delete a city from the search history list by clicking the red trashcan icon next to its name.
 
-![screenshot of weather dashboard application deployed live](assets/images/weather-dashboard.png)
+![screenshot of weather dashboard application deployed live](assets/images/weather-dashboard-image.png)
 
 
 ## Credits
